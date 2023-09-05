@@ -39,32 +39,39 @@ function Ruleta({ personas }) {
     return (
         <>
             <div className="miContenedor">
-            <h1 className="tituloRuleta">Ruleta de ganadores Periferia IT</h1>
-            <br/>
-            <img src={logo} alt="Logo de la Empresa" className="miLogo"/>
-            <img src={logoDerecha} alt="Segundo Logo" className="miLogoDerecha"/> 
-            <button onClick={girarRuleta} className="miBoton">Girar</button> 
-            <div className="flecha"></div>
-            {/* <div className={`ruletaVisual ${ganadorTemporal ? 'girando' : ''}`}></div>  */}
-            <div className={`ruletaVisual ${ganadorTemporal ? 'girando' : ''}`}>
-                <div className="sector"></div>
-                <div className="sector"></div>
-                <div className="sector"></div>
-                <div className="sector"></div>
-                <div className="sector"></div>
-                <div className="sector"></div>
-            </div>
-
-            {ganadorTemporal && <p className="miTextoDestacado">{ganadorTemporal}</p>}
-            <ul className="miLista">
-                {ganadores.map((ganador, index) => (
-                    <li key={ganador} className="miItemLista">{index + 1}. {ganador} 🎉🥳🎉</li>
-                ))}
-            </ul>
-            {ganadores.length === 9 && <p className="felicitaciones">🎉🥳¡¡¡Felicitaciones a los ganadores!!!🥳🎉</p>}
+                <h1 className="tituloRuleta">Ruleta de ganadores Periferia IT</h1>
+                <img src={logo} alt="Logo de la Empresa" className="miLogo"/>
+                <img src={logoDerecha} alt="Segundo Logo" className="miLogoDerecha"/>
+    
+                <div className="contenedorPrincipal">
+                    <div className="seccionRuleta">
+                        <button onClick={girarRuleta} className="miBoton">Girar</button> 
+                        <div className="flecha"></div>
+                        <div className={`ruletaVisual ${ganadorTemporal ? 'girando' : ''}`}>
+                            <div className="sector"></div>
+                            <div className="sector"></div>
+                            <div className="sector"></div>
+                            <div className="sector"></div>
+                            <div className="sector"></div>
+                            <div className="sector"></div>
+                        </div>
+                        {ganadorTemporal && <p className="miTextoDestacado">{ganadorTemporal}</p>}
+                    </div>
+                    <div className="seccionGanadores">
+                    <h2 className={ganadorTemporal ? 'parpadeo' : ''}>Ganadores...</h2>
+                        <ul className="miLista">
+                            {ganadores.map((ganador, index) => (
+                                <li key={ganador} className="miItemLista">{index + 1}. {ganador} 🎉🥳🎉</li>
+                            ))}
+                        </ul>
+                        {ganadores.length === 9 && <p className="felicitaciones">🎉🥳¡¡¡Felicitaciones a los ganadores!!!🥳🎉</p>}
+                    </div>
+                </div>
             </div>
         </>
     );
+    
+    
 }
 
 export default Ruleta;

@@ -46,25 +46,42 @@ p {
 
 
 .miContenedor {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  min-height: 100vh; 
-  padding: 2em; 
+  align-items: center;
 }
+
+.contenedorPrincipal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  margin-top: 150px; 
+}
+
+.seccionRuleta {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccionGanadores {
+  flex: 1;
+  padding-left: 20px;
+}
+
 .miLogo {
   position: absolute;
-  top: 10px;  
-  left: 10px; 
+  top: 10px;
+  left: 10px;
   max-width: 150px;
   height: auto;
 }
 
 .miLogoDerecha {
   position: absolute;
-  top: 10px;  
+  top: 10px;
   right: 10px;
   max-width: 150px;
   height: auto;
@@ -78,20 +95,26 @@ p {
 }
 
 .tituloRuleta {
-  font-size: 24px;
-  margin: 0; 
-  color: #425F57;
+  font-size: 24px; 
+  text-align: center;
+  margin-bottom: 20px;
+  color: #425F57; 
   font-weight: bold;
 }
 
 
 
 .miBoton {
-  padding: 10px 20px;
+  padding: 15px 30px; 
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 22px; 
   cursor: pointer;
+  border-radius: 8px;
+  background-color: #669933;
+  color: white;
+  transition: background-color 0.3s;
 }
+
 
 .miTextoDestacado {
   font-weight: bold;
@@ -141,8 +164,8 @@ p {
 /*Altenativa*/
 
 .ruletaVisual {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   background: conic-gradient(#A8E890, #749F82, #A8E890, #CFFF8D);
   border-radius: 50%;
   margin-top: 1em;
@@ -182,9 +205,20 @@ p {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid black;
+  border-top: 20px solid black;
   margin: 10px auto 0 auto;
 }
+
+@keyframes parpadeo {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.parpadeo {
+  animation: parpadeo 1s infinite;
+}
+
 
 
 
