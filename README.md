@@ -1,0 +1,2 @@
+# ruletaPeriferiaIT
+Aplicación en React 
