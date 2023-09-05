@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ruletaPeriferiaIT/static/css/main.9f98f6aa.css",
+    "main.js": "/ruletaPeriferiaIT/static/js/main.962880ec.js",
+    "static/js/787.07584706.chunk.js": "/ruletaPeriferiaIT/static/js/787.07584706.chunk.js",
+    "static/media/periferia-it-logo.png": "/ruletaPeriferiaIT/static/media/periferia-it-logo.9a073b0b3539602b1b14.png",
+    "static/media/logo.svg": "/ruletaPeriferiaIT/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ruletaPeriferiaIT/index.html",
+    "main.9f98f6aa.css.map": "/ruletaPeriferiaIT/static/css/main.9f98f6aa.css.map",
+    "main.962880ec.js.map": "/ruletaPeriferiaIT/static/js/main.962880ec.js.map",
+    "787.07584706.chunk.js.map": "/ruletaPeriferiaIT/static/js/787.07584706.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f98f6aa.css",
+    "static/js/main.962880ec.js"
+  ]
+}
